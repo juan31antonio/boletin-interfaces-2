@@ -74,10 +74,6 @@ export default function Home() {
       ------------------------------------------------
       <br/>
       <br/>
-      <TimerCounter></TimerCounter>
-      ------------------------------------------------
-      <br/>
-      <br/>
       <ThemeSelector></ThemeSelector>
       ------------------------------------------------
       <br/>
