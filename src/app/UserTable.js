@@ -17,7 +17,11 @@ export default function UserTable(){
         setUsers([...users,
             usuario]
         )
-    }      
+    }     
+    
+    function deleteUser(indice){
+        setUsers(users.filter((usuario, i) => i!=indice))
+    }
     
     
 
@@ -54,13 +58,16 @@ export default function UserTable(){
                 <button type="submit">Add Table</button>
             </form>
             <table border="1">
-                {users.map((usuario,index) =>
-                    <tr key={index}>
-                        <td>{usuario.nombre}</td>
-                        <td>{usuario.password}</td>
-                        <td>{usuario.email}</td>
-                    </tr>
-                )}
+                <tbody>
+                    {users.map((usuario,index) =>
+                        <tr key={index}>
+                            <td>{usuario.nombre}</td>
+                            <td>{usuario.password}</td>
+                            <td>{usuario.email}</td>
+                            <td><button onClick={() => deleteUser(index)}>Delete user</button></td>
+                        </tr>
+                    )}
+                </tbody>
             </table>
         </div>
     )
