@@ -8,6 +8,7 @@ export default function AverageCalculator(){
 
     function deleteCalificacions(){
         setCalificaciones([])
+        setPromedio(0)        
     }
 
     function addCalificacion(){

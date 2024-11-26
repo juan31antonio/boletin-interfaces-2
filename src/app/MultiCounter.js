@@ -11,25 +11,24 @@ export default function MultiCounter(){
         const nuevosContadores = [...contadores];
         nuevosContadores[index] += 1; 
         setContadores(nuevosContadores);
-      }
+    }
     
-      function reducirCount(index) {
-        const nuevosContadores = [...contadores];
-        nuevosContadores[index] -= 1;  
-        setContadores(nuevosContadores);
-      }
+    function reducirCount(index) {
+    const nuevosContadores = [...contadores];
+    nuevosContadores[index] -= 1;  
+    setContadores(nuevosContadores);
+    }
     
-      function resetCount(index) {
-        const nuevosContadores = [...contadores];
-        nuevosContadores[index] = 0;  
-        setContadores(nuevosContadores);
-      }
+    function resetCount(index) {
+    const nuevosContadores = [...contadores];
+    nuevosContadores[index] = 0;  
+    setContadores(nuevosContadores);
+    }
     
 
     return(
         <div>
             <button onClick={addCounter}>Agregar</button>
-
             <ul>
                 {contadores.map((contador, index) => 
                     <li key={index}>
